@@ -44,7 +44,7 @@ const courses = [
   {
     id: "bridal",
     title: "Bridal Aari Masterclass",
-    duration: "3 Months",
+    duration: "2 Months",
     mode: "Online + Offline",
     price: "₹10,000",
     features: [
