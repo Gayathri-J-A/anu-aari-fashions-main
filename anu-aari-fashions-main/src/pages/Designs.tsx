@@ -29,7 +29,11 @@ const designs = [
   // Simple
   { id: "AAF005", image: galleryCustom, name: "gallery-custom-1", suitable: "Simple", priceRange: "", filter: "Simple" },
   { id: "AAF006", image: galleryLehenga, name: "gallery-lehenga-1", suitable: "Simple", priceRange: "", filter: "Simple" },
+<<<<<<< HEAD
   { id: "AAF007", image: img5, name: "img5", suitable: "Simple", priceRange: "", filter: "Simple" },
+=======
+  { id: "AAF007", image: img5, name: "img5", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
+>>>>>>> 3c48dead15b1de14fbdf7cf312fe1e1636404d87
   
   // Heavy Work (same as Bridal)
   { id: "AAF008", image: galleryBridal, name: "gallery-bridal-1", suitable: "Heavy Work", priceRange: "", filter: "Heavy Work" },

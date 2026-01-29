@@ -12,7 +12,11 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+<<<<<<< HEAD
     "predeploy": "npm run build",
+=======
+     "predeploy": "npm run build",
+>>>>>>> 3c48dead15b1de14fbdf7cf312fe1e1636404d87
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
