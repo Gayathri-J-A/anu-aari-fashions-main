@@ -22,7 +22,7 @@ export const Footer = () => {
                 </span>
               </div>
             </div>
-            <p className="text-cream/70 text-sm leading-relaxed font-elegant text-lg">
+            <p className="text-cream/70 text-sm md:text-lg leading-relaxed font-elegant">
               Where Tradition Meets Elegance. Handcrafted Aari embroidery for the modern woman.
             </p>
             <div className="flex gap-4">
