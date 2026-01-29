@@ -3,77 +3,47 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import galleryBridal from "@/assets/gallery-bridal-1.jpg";
-import gallerySaree from "@/assets/gallery-saree-1.jpg";
 import galleryLehenga from "@/assets/gallery-lehenga-1.jpg";
 import galleryCustom from "@/assets/gallery-custom-1.jpg";
+import gallerySaree from "@/assets/gallery-saree-1.jpg";
+import img1 from "@/assets/img1.jpg";
+import img2 from "@/assets/img2.jpg";
+import img3 from "@/assets/img 3.jpg";
+import img4 from "@/assets/img4.jpg";
+import img5 from "@/assets/img5.jpg";
+import img6 from "@/assets/img6.jpg";
+import img8 from "@/assets/img8.jpg";
+import img9 from "@/assets/img9.jpg";
+import img10 from "@/assets/img10.jpg";
+import img11 from "@/assets/img11.jpg";
 
 const filters = ["All", "Bridal", "Simple", "Heavy Work", "Modern"];
 
 const designs = [
-  {
-    id: "AAF001",
-    image: galleryBridal,
-    name: "Royal Peacock Blouse",
-    suitable: "Bridal",
-    priceRange: "₹8,000 - ₹12,000",
-    filter: "Bridal",
-  },
-  {
-    id: "AAF002",
-    image: gallerySaree,
-    name: "Emerald Temple Border",
-    suitable: "Party",
-    priceRange: "₹15,000 - ₹20,000",
-    filter: "Heavy Work",
-  },
-  {
-    id: "AAF003",
-    image: galleryLehenga,
-    name: "Floral Dream Lehenga",
-    suitable: "Bridal",
-    priceRange: "₹25,000 - ₹35,000",
-    filter: "Bridal",
-  },
-  {
-    id: "AAF004",
-    image: galleryCustom,
-    name: "Cream Minimal Blouse",
-    suitable: "Casual",
-    priceRange: "₹3,000 - ₹5,000",
-    filter: "Simple",
-  },
-  {
-    id: "AAF005",
-    image: galleryBridal,
-    name: "Maroon Heritage Set",
-    suitable: "Bridal",
-    priceRange: "₹18,000 - ₹25,000",
-    filter: "Heavy Work",
-  },
-  {
-    id: "AAF006",
-    image: gallerySaree,
-    name: "Contemporary Fusion",
-    suitable: "Party",
-    priceRange: "₹10,000 - ₹15,000",
-    filter: "Modern",
-  },
-  {
-    id: "AAF007",
-    image: galleryCustom,
-    name: "Elegant Day Wear",
-    suitable: "Casual",
-    priceRange: "₹2,500 - ₹4,000",
-    filter: "Simple",
-  },
-  {
-    id: "AAF008",
-    image: galleryLehenga,
-    name: "Modern Chic Design",
-    suitable: "Party",
-    priceRange: "₹8,000 - ₹12,000",
-    filter: "Modern",
-  },
+  // Bridal
+  { id: "AAF001", image: galleryBridal, name: "gallery-bridal-1", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
+  { id: "AAF002", image: img6, name: "img6", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
+  { id: "AAF003", image: img9, name: "img9", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
+  { id: "AAF004", image: img10, name: "img10", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
+  
+  // Simple
+  { id: "AAF005", image: galleryCustom, name: "gallery-custom-1", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
+  { id: "AAF006", image: galleryLehenga, name: "gallery-lehenga-1", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
+  { id: "AAF007", image: img5, name: "img5", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
+  
+  // Heavy Work (same as Bridal)
+  { id: "AAF008", image: galleryBridal, name: "gallery-bridal-1", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
+  { id: "AAF009", image: img6, name: "img6", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
+  { id: "AAF010", image: img9, name: "img9", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
+  { id: "AAF011", image: img10, name: "img10", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
+  
+  // Modern
+  { id: "AAF012", image: img3, name: "img 3", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
+  { id: "AAF013", image: img1, name: "img1", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
+  { id: "AAF014", image: img2, name: "img2", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
+  { id: "AAF015", image: img4, name: "img4", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
+  { id: "AAF016", image: img8, name: "img8", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
+  { id: "AAF017", image: img11, name: "img11", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
 ];
 
 const Designs = () => {
@@ -88,7 +58,7 @@ const Designs = () => {
     const message = encodeURIComponent(
       `Hi! I'm interested in design ${designId} from Anu Aari Fashion. Please share more details.`
     );
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    window.open(`https://wa.me/916385490317?text=${message}`, "_blank");
   };
 
   return (
@@ -153,10 +123,7 @@ const Designs = () => {
                 </div>
                 <div className="p-6 space-y-4">
                   <div>
-                    <h3 className="font-display text-lg text-foreground">
-                      {design.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mt-1">
+                    <p className="text-muted-foreground text-sm">
                       Suitable for:{" "}
                       <span className="text-gold">{design.suitable}</span>
                     </p>

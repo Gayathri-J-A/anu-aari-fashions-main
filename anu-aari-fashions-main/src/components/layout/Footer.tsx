@@ -27,7 +27,7 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/anu_aari_fashion"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-gold hover:text-maroon-dark transition-all duration-300"
@@ -35,7 +35,7 @@ export const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/916385490317"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-gold hover:text-maroon-dark transition-all duration-300"
@@ -43,7 +43,7 @@ export const Footer = () => {
                 <Phone size={18} />
               </a>
               <a
-                href="mailto:contact@anuaarifashion.com"
+                href="mailto:aariworkanu@gmail.com"
                 className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-gold hover:text-maroon-dark transition-all duration-300"
               >
                 <Mail size={18} />
@@ -92,15 +92,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-cream/70 text-sm">
                 <MapPin size={18} className="text-gold mt-0.5 flex-shrink-0" />
-                <span>Chennai, Tamil Nadu, India</span>
+                <span>Cuddalore, Tamil Nadu, India</span>
               </li>
               <li className="flex items-center gap-3 text-cream/70 text-sm">
                 <Phone size={18} className="text-gold flex-shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 6385490317</span>
               </li>
               <li className="flex items-center gap-3 text-cream/70 text-sm">
                 <Mail size={18} className="text-gold flex-shrink-0" />
-                <span>contact@anuaarifashion.com</span>
+                <span>aariworkanu@gmail.com</span>
               </li>
             </ul>
           </div>

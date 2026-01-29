@@ -1,11 +1,20 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import galleryBridal from "@/assets/gallery-bridal-1.jpg";
-import gallerySaree from "@/assets/gallery-saree-1.jpg";
-import galleryLehenga from "@/assets/gallery-lehenga-1.jpg";
 import galleryCustom from "@/assets/gallery-custom-1.jpg";
+import galleryLehenga from "@/assets/gallery-lehenga-1.jpg";
+import img1 from "@/assets/img1.jpg";
+import img2 from "@/assets/img2.jpg";
+import img3 from "@/assets/img 3.jpg";
+import img4 from "@/assets/img4.jpg";
+import img5 from "@/assets/img5.jpg";
+import img6 from "@/assets/img6.jpg";
+import img8 from "@/assets/img8.jpg";
+import img9 from "@/assets/img9.jpg";
+import img10 from "@/assets/img10.jpg";
+import img11 from "@/assets/img11.jpg";
 
-const categories = ["All", "Bridal", "Saree", "Lehenga", "Custom"];
+const categories = ["All", "Bridal", "Simple Design", "Minimal Design", "Custom"];
 
 const galleryItems = [
   {
@@ -15,62 +24,124 @@ const galleryItems = [
     category: "Bridal",
     year: "2024",
     type: "Peacock Motif",
+    price: 700,
   },
   {
     id: 2,
-    image: gallerySaree,
-    title: "Emerald Silk Saree",
-    category: "Saree",
+    image: img1,
+    title: "Emerald Bridal Design",
+    category: "Bridal",
     year: "2024",
     type: "Traditional Border",
+    price: 1000,
   },
   {
     id: 3,
-    image: galleryLehenga,
-    title: "Royal Blue Lehenga",
-    category: "Lehenga",
+    image: img4,
+    title: "Bridal Elegance",
+    category: "Bridal",
     year: "2024",
-    type: "Floral Pattern",
+    type: "Modern Minimal",
+    price: 1300,
   },
   {
     id: 4,
-    image: galleryCustom,
-    title: "Cream Elegance",
-    category: "Custom",
-    year: "2024",
-    type: "Modern Minimal",
+    image: img6,
+    title: "Bridal Temple Design",
+    category: "Bridal",
+    year: "2023",
+    type: "Temple Design",
+    price: 1600,
   },
   {
     id: 5,
-    image: galleryBridal,
-    title: "Maroon Bridal Set",
+    image: img9,
+    title: "Bridal Blouse",
     category: "Bridal",
     year: "2023",
-    type: "Heavy Work",
+    type: "Fusion Style",
+    price: 1900,
   },
   {
     id: 6,
-    image: gallerySaree,
-    title: "Temple Saree Border",
-    category: "Saree",
+    image: img10,
+    title: "Bridal Classic",
+    category: "Bridal",
     year: "2023",
-    type: "Temple Design",
+    type: "Elegant Design",
+    price: 2200,
   },
   {
     id: 7,
-    image: galleryLehenga,
-    title: "Designer Lehenga",
-    category: "Lehenga",
-    year: "2023",
-    type: "Paisley Work",
+    image: galleryCustom,
+    title: "Cream Custom Design",
+    category: "Simple Design",
+    year: "2024",
+    type: "Custom Work",
+    price: 2500,
   },
   {
     id: 8,
-    image: galleryCustom,
-    title: "Contemporary Blouse",
-    category: "Custom",
+    image: galleryLehenga,
+    title: "Royal Lehenga Design",
+    category: "Simple Design",
+    year: "2024",
+    type: "Lehenga Pattern",
+    price: 2800,
+  },
+  {
+    id: 9,
+    image: img2,
+    title: "Simple Saree Design",
+    category: "Simple Design",
+    year: "2022",
+    type: "Saree Border",
+    price: 900,
+  },
+  {
+    id: 10,
+    image: img5,
+    title: "Simple Blouse Design",
+    category: "Simple Design",
     year: "2023",
-    type: "Fusion Style",
+    type: "Basic Pattern",
+    price: 1100,
+  },
+  {
+    id: 11,
+    image: img3,
+    title: "Royal Blue Lehenga",
+    category: "Minimal Design",
+    year: "2024",
+    type: "Floral Pattern",
+    price: 1300,
+  },
+  {
+    id: 12,
+    image: img8,
+    title: "Designer Lehenga",
+    category: "Minimal Design",
+    year: "2023",
+    type: "Paisley Work",
+    price: 2500,
+  },
+  {
+    id: 13,
+    image: galleryLehenga,
+    title: "Minimal Lehenga Design",
+    category: "Minimal Design",
+    year: "2023",
+    type: "Minimal Border",
+    price: 1500,
+  },
+  {
+    id: 14,
+    image: img11,
+    title: "Contemporary Design",
+    category: "Custom",
+    year: "2022",
+    type: "Modern Fusion",
+    price: 3400,
   },
 ];
 
@@ -150,6 +221,9 @@ const Gallery = () => {
                     <span className="text-cream/60 text-xs">{item.category}</span>
                     <span className="text-cream/40">•</span>
                     <span className="text-cream/60 text-xs">{item.year}</span>
+                  </div>
+                  <div className="mt-3 pt-3 border-t border-cream/20">
+                    <span className="text-gold font-elegant text-sm">starts from 700 rupees</span>
                   </div>
                 </div>
               </div>

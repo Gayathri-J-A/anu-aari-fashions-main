@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Sparkles, Heart, Award, Users } from "lucide-react";
+import { ArrowRight, Sparkles, Award, Users } from "lucide-react";
 import heroImage from "@/assets/hero-embroidery.jpg";
 import galleryBridal from "@/assets/gallery-bridal-1.jpg";
-import gallerySaree from "@/assets/gallery-saree-1.jpg";
 import galleryLehenga from "@/assets/gallery-lehenga-1.jpg";
 import galleryCustom from "@/assets/gallery-custom-1.jpg";
 
@@ -15,7 +14,7 @@ const services = [
     description: "Exquisite handcrafted embroidery for your special day",
   },
   {
-    icon: <Heart className="w-6 h-6" />,
+    icon: <Award className="w-6 h-6" />,
     title: "Custom Blouse Designs",
     description: "Personalized designs tailored to your style",
   },
@@ -33,7 +32,6 @@ const services = [
 
 const featuredWorks = [
   { image: galleryBridal, title: "Bridal Collection", category: "Bridal Blouse" },
-  { image: gallerySaree, title: "Silk Saree Work", category: "Saree" },
   { image: galleryLehenga, title: "Royal Lehenga", category: "Lehenga" },
   { image: galleryCustom, title: "Custom Design", category: "Modern" },
 ];
@@ -86,12 +84,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-cream/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-cream/50 rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
+        {/* Scroll indicator removed per request */}
       </section>
 
       {/* About Preview */}

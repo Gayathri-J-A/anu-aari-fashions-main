@@ -40,9 +40,11 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full bg-gradient-maroon flex items-center justify-center">
-            <span className="text-gold font-display text-xl font-bold">A</span>
-          </div>
+          <img 
+            src="/favicon.ico" 
+            alt="Anu Aari Fashion Logo"
+            className="w-10 h-10 rounded-full object-cover"
+          />
           <div className="flex flex-col">
             <span
               className={`font-display text-xl font-semibold tracking-wide transition-colors ${

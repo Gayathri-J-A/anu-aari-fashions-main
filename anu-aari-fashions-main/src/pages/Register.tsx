@@ -17,7 +17,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const courses = [
   { value: "basic", label: "Basic Aari Course - ₹3,000" },
-  { value: "advanced", label: "Advanced Aari Course - ₹6,000" },
+  { value: "advanced", label: "Advanced Aari Course - ₹7,000" },
   { value: "bridal", label: "Bridal Aari Masterclass - ₹10,000" },
 ];
 
@@ -30,7 +30,7 @@ const Register = () => {
     email: "",
     course: "",
     address: "",
-    mode: "online",
+    mode: "Online + Offline",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -45,11 +45,18 @@ const Register = () => {
       return;
     }
 
-    // Simulate form submission
+    // Build WhatsApp message with registration details
+    const message = encodeURIComponent(
+      `New registration from website:\n\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nCourse: ${courses.find(c => c.value === formData.course)?.label || formData.course}\nMode: ${formData.mode}\nAddress: ${formData.address}`
+    );
+
+    // Open WhatsApp chat to send the registration (owner number)
+    window.open(`https://wa.me/916385490317?text=${message}`, "_blank");
+
     setIsSubmitted(true);
     toast({
-      title: "Registration Successful!",
-      description: "We will contact you shortly.",
+      title: "Registration Initiated",
+      description: "WhatsApp opened with your registration. Please send it to complete.",
     });
   };
 
@@ -140,7 +147,7 @@ const Register = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 6385490317"
                     className="py-6"
                   />
                 </div>
@@ -204,13 +211,13 @@ const Register = () => {
                   className="flex gap-6"
                 >
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="online" id="online" />
-                    <Label htmlFor="online" className="cursor-pointer">
-                      Online
+                    <RadioGroupItem value="Online + Offline" id="onlineOffline" />
+                    <Label htmlFor="onlineOffline" className="cursor-pointer">
+                      Online + Offline
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="offline" id="offline" />
+                    <RadioGroupItem value="Offline" id="offline" />
                     <Label htmlFor="offline" className="cursor-pointer">
                       Offline
                     </Label>

@@ -1,10 +1,10 @@
 import { Layout } from "@/components/layout/Layout";
-import { Target, Eye, Heart, Award, Users, Sparkles } from "lucide-react";
+import { Target, Eye, Award, Users, Sparkles } from "lucide-react";
 import founderImage from "@/assets/founder-portrait.jpg";
 
 const values = [
   {
-    icon: <Heart className="w-6 h-6" />,
+    icon: <Sparkles className="w-6 h-6" />,
     title: "Passion",
     description: "Every stitch is crafted with love and dedication",
   },
@@ -69,25 +69,25 @@ const About = () => {
                 <span className="text-gold uppercase tracking-[0.2em] text-sm font-medium">
                   Meet the Founder
                 </span>
-                <h2 className="font-display text-4xl text-maroon mt-2">Anu</h2>
+                <h2 className="font-display text-4xl text-maroon mt-2">Anusha devi.S</h2>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                With years of experience in Aari embroidery, Anu founded{" "}
-                <strong className="text-foreground">Anu Aari Fashion</strong> to bring 
-                handcrafted elegance to modern fashion. Her journey began in a small town 
-                in Tamil Nadu, where she learned this traditional art from her grandmother.
+                I am a passionate Aari embroidery designer specializing in handcrafted blouse designs.
+                With a keen eye for detail, I create elegant and premium embroidery work.
+                Each design is thoughtfully crafted to enhance beauty and individuality.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Today, she leads a team of skilled artisans, each dedicated to preserving 
-                this beautiful craft while adapting it to contemporary tastes. Her mission 
-                is to empower women through skill-based learning and make premium Aari work 
-                accessible to everyone.
+                I focus on quality, precision, and fine finishing in every order.
+                Customer satisfaction is always my top priority.
+                I blend traditional craftsmanship with modern design sensibilities.
+                Every piece reflects dedication, creativity, and skilled artistry.
+                Custom designs are created to make every outfit truly special.
               </p>
               <div className="flex items-center gap-4 pt-4">
                 <div className="w-12 h-12 rounded-full bg-maroon flex items-center justify-center">
-                  <span className="text-gold font-display text-xl">10+</span>
+                  <span className="text-gold font-display text-xl">4+</span>
                 </div>
-                <span className="text-foreground">Years of Experience</span>
+                <span className="text-foreground">Years Experience</span>
               </div>
             </div>
           </div>

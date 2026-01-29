@@ -7,8 +7,8 @@ const courses = [
   {
     id: "basic",
     title: "Basic Aari Course",
-    duration: "30 Days",
-    mode: "Online",
+    duration: "15 Days",
+    mode: "Online + Offline",
     price: "₹3,000",
     features: [
       "Introduction to Aari needle",
@@ -24,10 +24,12 @@ const courses = [
   {
     id: "advanced",
     title: "Advanced Aari Course",
-    duration: "2 Months",
-    mode: "Online",
-    price: "₹6,000",
+    duration: "1 Month",
+    mode: "Online + Offline",
+    price: "₹7,000",
     features: [
+      "55 types of stitching with material",
+      "Teaching pattern",
       "Advanced stitch techniques",
       "Complex pattern creation",
       "Live video sessions",
@@ -91,7 +93,7 @@ const Courses = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <span className="text-gold uppercase tracking-[0.2em] text-sm font-medium">
-              Learn From Experts
+              Made for the modern you
             </span>
             <h1 className="font-display text-5xl md:text-6xl text-maroon">
               Our Courses

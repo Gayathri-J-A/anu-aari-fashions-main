@@ -11,19 +11,19 @@ const contactInfo = [
   {
     icon: <Phone className="w-6 h-6" />,
     title: "Phone",
-    value: "+91 98765 43210",
-    link: "tel:+919876543210",
+    value: "+91 6385490317",
+    link: "tel:+916385490317",
   },
   {
     icon: <Mail className="w-6 h-6" />,
     title: "Email",
-    value: "contact@anuaarifashion.com",
-    link: "mailto:contact@anuaarifashion.com",
+    value: "aariworkanu@gmail.com",
+    link: "mailto:aariworkanu@gmail.com",
   },
   {
     icon: <MapPin className="w-6 h-6" />,
     title: "Location",
-    value: "Chennai, Tamil Nadu, India",
+    value: "Cuddalore, Tamil Nadu, India",
     link: null,
   },
 ];
@@ -32,15 +32,15 @@ const socialLinks = [
   {
     icon: <Instagram className="w-5 h-5" />,
     name: "Instagram",
-    handle: "@anuaarifashion",
-    link: "https://instagram.com/anuaarifashion",
+    handle: "@anu_aari_fashion",
+    link: "https://instagram.com/anu_aari_fashion",
     color: "hover:bg-pink-500",
   },
   {
     icon: <MessageCircle className="w-5 h-5" />,
     name: "WhatsApp",
-    handle: "+91 98765 43210",
-    link: "https://wa.me/919876543210",
+    handle: "+91 6385490317",
+    link: "https://wa.me/916385490317",
     color: "hover:bg-green-500",
   },
 ];
@@ -56,9 +56,27 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Please fill all fields",
+        description: "Name, email, and message are required.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Create message with form data
+    const message = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+    );
+
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/916385490317?text=${message}`, "_blank");
+
     toast({
       title: "Message Sent!",
-      description: "We'll get back to you soon.",
+      description: "WhatsApp opened with your message. Send it to complete.",
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
@@ -147,7 +165,7 @@ const Contact = () => {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20Anu%20Aari%20Fashion%20services."
+                href="https://wa.me/916385490317?text=Hi!%20I'm%20interested%20in%20Anu%20Aari%20Fashion%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-lg hover:bg-green-600 transition-colors"
