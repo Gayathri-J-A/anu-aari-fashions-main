@@ -27,8 +27,8 @@ const designs = [
   { id: "AAF004", image: img10, name: "img10", suitable: "Bridal", priceRange: "", filter: "Bridal" },
   
   // Simple
-  { id: "AAF005", image: galleryCustom, name: "gallery-custom-1", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
-  { id: "AAF006", image: galleryLehenga, name: "gallery-lehenga-1", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
+  { id: "AAF005", image: galleryCustom, name: "gallery-custom-1", suitable: "Simple", priceRange: "", filter: "Simple" },
+  { id: "AAF006", image: galleryLehenga, name: "gallery-lehenga-1", suitable: "Simple", priceRange: "", filter: "Simple" },
   { id: "AAF007", image: img5, name: "img5", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
   
   // Heavy Work (same as Bridal)
@@ -38,12 +38,12 @@ const designs = [
   { id: "AAF011", image: img10, name: "img10", suitable: "Heavy Work", priceRange: "", filter: "Heavy Work" },
   
   // Modern
-  { id: "AAF012", image: img3, name: "img 3", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
-  { id: "AAF013", image: img1, name: "img1", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
-  { id: "AAF014", image: img2, name: "img2", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
-  { id: "AAF015", image: img4, name: "img4", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
-  { id: "AAF016", image: img8, name: "img8", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
-  { id: "AAF017", image: img11, name: "img11", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
+  { id: "AAF012", image: img3, name: "img 3", suitable: "Modern", priceRange: "", filter: "Modern" },
+  { id: "AAF013", image: img1, name: "img1", suitable: "Modern", priceRange: "", filter: "Modern" },
+  { id: "AAF014", image: img2, name: "img2", suitable: "Modern", priceRange: "", filter: "Modern" },
+  { id: "AAF015", image: img4, name: "img4", suitable: "Modern", priceRange: "", filter: "Modern" },
+  { id: "AAF016", image: img8, name: "img8", suitable: "Modern", priceRange: "", filter: "Modern" },
+  { id: "AAF017", image: img11, name: "img11", suitable: "Modern", priceRange: "", filter: "Modern" },
 ];
 
 const Designs = () => {
