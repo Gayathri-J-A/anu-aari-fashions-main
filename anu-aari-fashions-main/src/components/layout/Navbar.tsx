@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -39,7 +39,7 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
+        <a href="/" className="flex items-center gap-2 group">
           <img 
             src="/favicon.ico" 
             alt="Anu Aari Fashion Logo"
@@ -61,14 +61,14 @@ export const Navbar = () => {
               Fashion
             </span>
           </div>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.path}
-              to={link.path}
+              href={link.path}
               className={`relative font-medium text-sm uppercase tracking-wider transition-colors hover:text-gold group ${
                 isScrolled ? "text-foreground" : "text-cream"
               } ${location.pathname === link.path ? "text-gold" : ""}`}
@@ -79,13 +79,13 @@ export const Navbar = () => {
                   location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               />
-            </Link>
+            </a>
           ))}
         </nav>
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <Link to="/register">
+          <a href="/register">
             <Button
               className={`font-medium uppercase tracking-wider text-xs px-6 py-5 transition-all duration-300 ${
                 isScrolled
@@ -95,7 +95,7 @@ export const Navbar = () => {
             >
               Join Course
             </Button>
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -117,21 +117,21 @@ export const Navbar = () => {
       >
         <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.path}
-              to={link.path}
+              href={link.path}
               className={`font-medium text-lg py-2 border-b border-border transition-colors hover:text-gold ${
                 location.pathname === link.path ? "text-gold" : "text-foreground"
               }`}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
-          <Link to="/register" className="mt-4">
+          <a href="/register" className="mt-4">
             <Button className="w-full bg-maroon text-cream hover:bg-maroon-dark uppercase tracking-wider py-6">
               Join Course
             </Button>
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

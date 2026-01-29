@@ -21,10 +21,10 @@ const filters = ["All", "Bridal", "Simple", "Heavy Work", "Modern"];
 
 const designs = [
   // Bridal
-  { id: "AAF001", image: galleryBridal, name: "gallery-bridal-1", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
-  { id: "AAF002", image: img6, name: "img6", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
-  { id: "AAF003", image: img9, name: "img9", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
-  { id: "AAF004", image: img10, name: "img10", suitable: "Bridal", priceRange: "Up to ₹700", filter: "Bridal" },
+  { id: "AAF001", image: galleryBridal, name: "gallery-bridal-1", suitable: "Bridal", priceRange: "", filter: "Bridal" },
+  { id: "AAF002", image: img6, name: "img6", suitable: "Bridal", priceRange: "", filter: "Bridal" },
+  { id: "AAF003", image: img9, name: "img9", suitable: "Bridal", priceRange: "", filter: "Bridal" },
+  { id: "AAF004", image: img10, name: "img10", suitable: "Bridal", priceRange: "", filter: "Bridal" },
   
   // Simple
   { id: "AAF005", image: galleryCustom, name: "gallery-custom-1", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
@@ -32,10 +32,10 @@ const designs = [
   { id: "AAF007", image: img5, name: "img5", suitable: "Simple", priceRange: "Up to ₹700", filter: "Simple" },
   
   // Heavy Work (same as Bridal)
-  { id: "AAF008", image: galleryBridal, name: "gallery-bridal-1", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
-  { id: "AAF009", image: img6, name: "img6", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
-  { id: "AAF010", image: img9, name: "img9", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
-  { id: "AAF011", image: img10, name: "img10", suitable: "Heavy Work", priceRange: "Up to ₹700", filter: "Heavy Work" },
+  { id: "AAF008", image: galleryBridal, name: "gallery-bridal-1", suitable: "Heavy Work", priceRange: "", filter: "Heavy Work" },
+  { id: "AAF009", image: img6, name: "img6", suitable: "Heavy Work", priceRange: "", filter: "Heavy Work" },
+  { id: "AAF010", image: img9, name: "img9", suitable: "Heavy Work", priceRange: "", filter: "Heavy Work" },
+  { id: "AAF011", image: img10, name: "img10", suitable: "Heavy Work", priceRange: "", filter: "Heavy Work" },
   
   // Modern
   { id: "AAF012", image: img3, name: "img 3", suitable: "Modern", priceRange: "Up to ₹700", filter: "Modern" },
