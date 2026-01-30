@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/favicon.ico";
+
+// Set your base path here
+const BASE_PATH = "/anu-aari-fashions-main";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -17,6 +21,7 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -25,6 +30,7 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu on location change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
@@ -38,10 +44,11 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
+
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 group">
-          <img 
-            src="/favicon.ico" 
+        <a href={`${BASE_PATH}/`} className="flex items-center gap-2 group">
+          <img
+            src={logo}
             alt="Anu Aari Fashion Logo"
             className="w-10 h-10 rounded-full object-cover"
           />
@@ -68,15 +75,17 @@ export const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link.path}
-              href={link.path}
-              className={`relative font-medium text-sm uppercase tracking-wider transition-colors hover:text-gold group ${
+              href={`${BASE_PATH}${link.path}`}
+              className={`relative font-medium text-sm uppercase tracking-wider transition-colors hover:text-gold ${
                 isScrolled ? "text-foreground" : "text-cream"
-              } ${location.pathname === link.path ? "text-gold" : ""}`}
+              }`}
             >
               {link.name}
               <span
                 className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${
-                  location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                  location.pathname === link.path
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
                 }`}
               />
             </a>
@@ -85,7 +94,7 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <a href="/register">
+          <a href={`${BASE_PATH}/register`}>
             <Button
               className={`font-medium uppercase tracking-wider text-xs px-6 py-5 transition-all duration-300 ${
                 isScrolled
@@ -119,15 +128,18 @@ export const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link.path}
-              href={link.path}
+              href={`${BASE_PATH}${link.path}`}
               className={`font-medium text-lg py-2 border-b border-border transition-colors hover:text-gold ${
-                location.pathname === link.path ? "text-gold" : "text-foreground"
+                location.pathname === link.path
+                  ? "text-gold"
+                  : "text-foreground"
               }`}
             >
               {link.name}
             </a>
           ))}
-          <a href="/register" className="mt-4">
+
+          <a href={`${BASE_PATH}/register`} className="mt-4">
             <Button className="w-full bg-maroon text-cream hover:bg-maroon-dark uppercase tracking-wider py-6">
               Join Course
             </Button>

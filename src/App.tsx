@@ -12,6 +12,7 @@ import Register from "./pages/Register";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -19,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/anu-aari-fashions-main">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
