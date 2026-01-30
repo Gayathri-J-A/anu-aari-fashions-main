@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/favicon.ico";
-
-// Set your base path here
-const BASE_PATH = "/anu-aari-fashions-main";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -21,7 +18,6 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -30,7 +26,6 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on location change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
@@ -46,12 +41,14 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
 
         {/* Logo */}
-        <a href={`${BASE_PATH}/`} className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
+          
           <img
             src={logo}
             alt="Anu Aari Fashion Logo"
-            className="w-10 h-10 rounded-full object-cover"
+             className="w-10 h-10 rounded-full object-cover"
           />
+
           <div className="flex flex-col">
             <span
               className={`font-display text-xl font-semibold tracking-wide transition-colors ${
@@ -68,17 +65,17 @@ export const Navbar = () => {
               Fashion
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.path}
-              href={`${BASE_PATH}${link.path}`}
-              className={`relative font-medium text-sm uppercase tracking-wider transition-colors hover:text-gold ${
+              to={link.path}
+              className={`relative font-medium text-sm uppercase tracking-wider transition-colors hover:text-gold group ${
                 isScrolled ? "text-foreground" : "text-cream"
-              }`}
+              } ${location.pathname === link.path ? "text-gold" : ""}`}
             >
               {link.name}
               <span
@@ -88,13 +85,13 @@ export const Navbar = () => {
                     : "w-0 group-hover:w-full"
                 }`}
               />
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <a href={`${BASE_PATH}/register`}>
+          <Link to="/register">
             <Button
               className={`font-medium uppercase tracking-wider text-xs px-6 py-5 transition-all duration-300 ${
                 isScrolled
@@ -104,7 +101,7 @@ export const Navbar = () => {
             >
               Join Course
             </Button>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -126,9 +123,9 @@ export const Navbar = () => {
       >
         <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.path}
-              href={`${BASE_PATH}${link.path}`}
+              to={link.path}
               className={`font-medium text-lg py-2 border-b border-border transition-colors hover:text-gold ${
                 location.pathname === link.path
                   ? "text-gold"
@@ -136,14 +133,14 @@ export const Navbar = () => {
               }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
 
-          <a href={`${BASE_PATH}/register`} className="mt-4">
+          <Link to="/register" className="mt-4">
             <Button className="w-full bg-maroon text-cream hover:bg-maroon-dark uppercase tracking-wider py-6">
               Join Course
             </Button>
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
