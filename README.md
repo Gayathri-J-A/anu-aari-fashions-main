@@ -1,4 +1,4 @@
-# Anu Aari Fashions — Local Project
+# Anu Aari Fashion
 
 This repository contains the Anu Aari Fashions website built with Vite, React and TypeScript.
 
