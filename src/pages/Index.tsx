@@ -72,14 +72,24 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
-              <Link to="/courses">
+              {/* <Link to="/courses">
                 <Button
                   variant="outline"
                   className="border-cream text-cream hover:bg-cream/10 px-8 py-6 text-sm uppercase tracking-wider font-medium"
                 >
                   Join Course
                 </Button>
-              </Link>
+              </Link> */}
+              <Link to="/courses">
+  <Button
+    className="bg-transparent border border-cream text-cream 
+               hover:bg-transparent hover:text-cream 
+               px-8 py-6 text-sm uppercase tracking-wider font-medium"
+  >
+    Course details
+  </Button>
+</Link>
+
             </div>
           </div>
         </div>
