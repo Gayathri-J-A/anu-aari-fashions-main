@@ -30,7 +30,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <HashRouter basename="/anu-aari-fashions-main">
+      {/* <HashRouter basename="/anu-aari-fashions-main"> */}
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -42,7 +42,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </HashRouter>
+      {/* </HashRouter> */}
     </TooltipProvider>
   </QueryClientProvider>
 );
