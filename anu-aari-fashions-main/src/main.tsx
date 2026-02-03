@@ -1,13 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App.tsx";
+import { HashRouter } from "react-router-dom";
+import App from './App';
 import "./index.css";
+const rootElement = document.getElementById("root");
+const routerBasename = import.meta.env.PROD ? "/anu-aari-fashions-main" : "/";
 
-createRoot(document.getElementById("root")!).render(
+
+// createRoot(document.getElementById("root")!).render(
+  if (rootElement) {
+  const root = createRoot(rootElement); 
+  root.render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter basename={routerBasename}>
     <App />
-   </BrowserRouter>
+   </HashRouter>
   </StrictMode>
 );
+  }
