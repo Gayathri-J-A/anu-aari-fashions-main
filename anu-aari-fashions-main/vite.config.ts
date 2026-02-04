@@ -7,18 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "/anu-aari-fashions-main/",
+  base: "/anu-aari-fashions-main/",   // must match GitHub repo name
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  server: {
-    host: "::",
-    port: 8080,
-    hmr: {
-      overlay: false,
     },
   },
 });
