@@ -215,7 +215,7 @@ const Index = () => {
               </Link>
               <Link to="/register">
                 <Button
-                  variant="outline"
+                  // variant="outline"
                   className="border-cream text-cream hover:bg-cream/10 px-8 py-6 text-sm uppercase tracking-wider font-medium"
                 >
                   Register Now
